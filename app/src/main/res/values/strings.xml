@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">FacemakerHw</string>
+    <string name="DisplayView">TextView</string>
+    <string name="face_display">Face Display</string>
+    <string name="display_text">Display Text</string>
+    <string name="randomize">Randomize</string>
+    <string name="hair">Hair</string>
+    <string name="eye">Eye</string>
+    <string name="skin">Skin</string>
+    <string name="red">Red</string>
+    <string name="green">Green</string>
+    <string name="blue">Blue</string>
+    <string name="choose_a_hair_style">Choose a Hair Style:</string>
 </resources>
