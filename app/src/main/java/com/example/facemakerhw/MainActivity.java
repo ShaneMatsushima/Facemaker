@@ -1,3 +1,7 @@
+/**
+ * @author Shane Matsushima
+ */
+
 package com.example.facemakerhw;
 
 import androidx.appcompat.app.AppCompatActivity;
