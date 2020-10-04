@@ -12,6 +12,12 @@ public class Face {
     private int hairColor;
     private int hairStyle;
 
+    public int blue;
+    public int red;
+    public int green;
+
+    public boolean isRandom = false;
+
     public Face(){
         randomize();
     }

@@ -10,13 +10,11 @@
     app:layoutDescription="@xml/activity_main_scene"
     tools:context=".MainActivity" >
 
-    <TextView
-        android:id="@+id/DisplaySurface"
+    <com.example.facemakerhw.FaceView
+        android:id="@+id/faceView"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_weight="2"
-        android:gravity="center_horizontal|center_vertical"
-        android:text="@string/display_text" />
+        android:layout_weight="1" />
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -31,16 +29,34 @@
             android:layout_height="wrap_content"
             android:text="@string/choose_a_hair_style" />
 
-        <RadioButton
-            android:id="@+id/radioHairButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/hair" />
-
         <Spinner
             android:id="@+id/spinnerHairChoice"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
+
+        <RadioGroup
+            android:id="@+id/radioButtonGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/radioHairButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/hair" />
+
+            <RadioButton
+                android:id="@+id/radioEyeButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/eye" />
+
+            <RadioButton
+                android:id="@+id/radioSkinButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/skin" />
+        </RadioGroup>
 
         <TextView
             android:id="@+id/green"
@@ -77,18 +93,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:max="255" />
-
-        <RadioButton
-            android:id="@+id/radioEyeButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/eye" />
-
-        <RadioButton
-            android:id="@+id/radioSkinButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/skin" />
 
         <Button
             android:id="@+id/randomButton"
