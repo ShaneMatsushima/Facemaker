@@ -12,14 +12,14 @@
 
     <com.example.facemakerhw.FaceView
         android:id="@+id/faceView"
-        android:layout_width="wrap_content"
+        android:layout_width="500sp"
         android:layout_height="match_parent"
         android:layout_weight="1" />
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_weight="1"
+        android:layout_weight="2"
         android:gravity="center"
         android:orientation="vertical">
 

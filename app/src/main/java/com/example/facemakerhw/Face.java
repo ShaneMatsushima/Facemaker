@@ -4,6 +4,8 @@
 
 package com.example.facemakerhw;
 
+import android.graphics.Color;
+
 import java.util.Random;
 
 public class Face {
@@ -12,9 +14,21 @@ public class Face {
     private int hairColor;
     private int hairStyle;
 
-    public int blue;
-    public int red;
-    public int green;
+    public int blueHair;
+    public int redHair;
+    public int greenHair;
+
+    public int blueEye;
+    public int redEye;
+    public int greenEye;
+
+    public int blueSkin;
+    public int redSkin;
+    public int greenSkin;
+
+    public int blueCurrent;
+    public int redCurrent;
+    public int greenCurrent;
 
     public boolean isRandom = false;
 
@@ -22,7 +36,7 @@ public class Face {
         randomize();
     }
 
-    private void randomize() {
+    public void randomize() {
         /**
          * External Citation
          * Date: 9/9/2020
@@ -34,11 +48,20 @@ public class Face {
         int upperBound = 255;
 
         //generates values from 0 - 254
-        skinColor = rand.nextInt(upperBound);
-        eyeColor = rand.nextInt(upperBound);
-        hairColor = rand.nextInt(upperBound);
-        hairStyle = rand.nextInt(4); //not a color, only has 3 choices
+        skinColor = Color.rgb(redSkin = rand.nextInt(upperBound), greenSkin = rand.nextInt(upperBound), blueSkin = rand.nextInt(upperBound));
+        eyeColor = Color.rgb( redEye = rand.nextInt(upperBound), greenEye = rand.nextInt(upperBound), blueEye = rand.nextInt(upperBound));
+        hairColor = Color.rgb(redHair = rand.nextInt(upperBound), greenHair = rand.nextInt(upperBound), blueHair = rand.nextInt(upperBound));
+        hairStyle = rand.nextInt(3); //not a color, only has 3 choices (0 - 2)
+
 
     }
+
+    public int getSkinColor(){ return skinColor; }
+    public int getHairColor(){ return hairColor; }
+    public int getEyeColor(){ return eyeColor; }
+    public int getHairStyle(){ return hairStyle;}
+
+
+
 
 }
