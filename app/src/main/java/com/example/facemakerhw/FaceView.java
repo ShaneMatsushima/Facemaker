@@ -19,14 +19,12 @@ public class FaceView extends SurfaceView {
 
     Paint facePaint = new Paint();
     Paint eyePaint = new Paint();
-    Paint mouthPaint = new Paint();
     Paint hairPaint = new Paint();
     Paint outerEyePaint = new Paint();
 
 
     /**
-     *
-     * Constructors that were inherited from SurfaceView class
+     * Constructor that was inherited from SurfaceView class
      */
 
     public FaceView(Context context, AttributeSet attrs) {
@@ -93,6 +91,9 @@ public class FaceView extends SurfaceView {
 
         canvas.drawCircle((viewWidth/2)-75,(viewHeight/2)-75,50, outerEyePaint);
         canvas.drawCircle((viewWidth/2)+75,(viewHeight/2)-75,50, outerEyePaint);
+
+        canvas.drawCircle((viewWidth/2)-75,(viewHeight/2)-75,25, eyePaint);
+        canvas.drawCircle((viewWidth/2)+75,(viewHeight/2)-75,25, eyePaint);
 
         hairPaint.setColor(Color.rgb(face.redHair, face.greenHair, face.blueHair));
         hairPaint.setStyle(Paint.Style.FILL);
